@@ -1,8 +1,13 @@
 <?php
 namespace views;
+use models\ClientsModel;
 
 class CrmView{
-
+    protected $model;
+    public function __construct()
+    {
+        $this->model = new ClientsModel();
+    }
 
     public function mainView()
     {
@@ -18,16 +23,20 @@ class CrmView{
         <title>Document</title>
        </head>
        <body>
-        <div id="div_principal_crm">
+        <div id="div_principal_crm" class ="container">
             <h2>AR SOLUTION TECHNOLOGY</h2>
             <div id="div_crm_botones">
             
                 <button class="btn btn-primary" id="btn_vertalleres" onclick="verTalleres();">Ver_Talleres</button>
                 <button class="btn btn-primary" id="btn_nuevovliente" onclick="preguntarNuevo();"  data-toggle="modal" data-target="#myModalClientes">Nuevo_Taller</button>
+            
             </div>
             <br>
             <div id="div_crm_resultados">
-               <?php   ?>
+               <?php  
+                    $clients = $this->model->getClients(); 
+                    $this->showClients($clients)
+               ?>
             </div>
         </div>
         <?php $this->modalClientes(); ?>
@@ -233,7 +242,7 @@ class CrmView{
                 <div>
                     <label for="">Seguimiento</label>
                     <div class="form-group">
-                        <textarea id="txtSeguimiento" rows="10" cols = "40"></textarea>
+                        <textarea id="txtSeguimiento" rows="10" cols="20"></textarea>
                     </div>
                 </div>
                 <br>
@@ -243,7 +252,7 @@ class CrmView{
     }
 
 
-    public function showAllFollowTaller($follows)
+    public function showAllFollowTaller($follows,$idTaller)
     {
         echo '<table class ="table table-striped">'; 
         echo '<tr>';
@@ -256,7 +265,6 @@ class CrmView{
             echo '<td>'.$follow['fecha'].'</td>'; 
             echo '<td>'.$follow['observacion'].'</td>'; 
             echo '</tr>';
-            $idTaller = $follow['id_taller'];
         }
         echo '</table>';
         echo '<br>';

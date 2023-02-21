@@ -79,7 +79,7 @@ class CrmController
     public function showFollows($request)
     {
         $follows = $this->model->showFollows($request['idTaller']);
-        $this->view->showAllFollowTaller($follows);
+        $this->view->showAllFollowTaller($follows,$request['idTaller']);
     }
     public function showInfoClient($request)
     {
