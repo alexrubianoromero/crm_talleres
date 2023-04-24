@@ -61,6 +61,7 @@ function grabarInfoTaller()
         var dueno = document.getElementById("txtDueno").value ;
         var contacto = document.getElementById("txtContacto").value ;
         var tipo = document.getElementById("txtTipo").value ;
+        var ciudad = document.getElementById("txtCiudad").value ;
         const http=new XMLHttpRequest();
         const url = 'index.php';
         http.onreadystatechange = function(){
@@ -78,6 +79,7 @@ function grabarInfoTaller()
                 +"&dueno="+dueno  
                 +"&contacto="+contacto  
                 +"&tipo="+tipo  
+                +"&ciudad="+ciudad  
             );
   }
 }
@@ -186,5 +188,60 @@ function showInfoCLiente(idTaller)
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     http.send("option=showInfoClient"
             +"&idTaller="+idTaller  
+            );
+    }
+    
+    function showClientsFilter()
+    {
+        var ciudad = document.getElementById("idCiudad").value ;
+        // alert(ciudad);
+        const http=new XMLHttpRequest();
+        const url = 'index.php';
+        http.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status ==200){
+                console.log(this.responseText);
+                document.getElementById("div_crm_resultados").innerHTML = this.responseText;
+            }
+    };
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(
+        "option=showClientsFilter"
+        +"&ciudad="+ciudad  
         );
+    }
+    
+    
+function actualizarInfoTaller()
+{
+    var idTaller = document.getElementById("idTaller").value ;
+    var nombre = document.getElementById("txtNombre").value ;
+    var telefono = document.getElementById("txtTelefono").value ;
+    var direccion = document.getElementById("txtDireccion").value ;
+    var dueno = document.getElementById("txtDueno").value ;
+    var contacto = document.getElementById("txtContacto").value ;
+    var tipo = document.getElementById("txtTipo").value ;
+    var ciudad = document.getElementById("txtCiudad").value ;
+    const http=new XMLHttpRequest();
+    const url = 'index.php';
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+            document.getElementById("cuerpoModalClientes").innerHTML = this.responseText;
+        }
+        };
+        http.open("POST",url);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send(
+            "option=actualizarTaller"
+            +"&idTaller="+idTaller  
+            +"&nombre="+nombre  
+            +"&telefono="+telefono  
+            +"&direccion="+direccion  
+            +"&dueno="+dueno  
+            +"&contacto="+contacto  
+            +"&tipo="+tipo  
+            +"&ciudad="+ciudad  
+        );
+    
 }

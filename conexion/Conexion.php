@@ -37,6 +37,18 @@ class Conexion{
             return $conexionMysql;
     }
 
+    public function get_table_assoc($datos)
+    {
+         $arreglo_assoc='';
+        $i=0;	
+        while($row = mysql_fetch_assoc($datos)){		
+        $arreglo_assoc[$i] = $row;
+        $i++;
+        }
+        return $arreglo_assoc;
+    }
+
+
 
 
 

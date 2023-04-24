@@ -12,13 +12,21 @@ class ClientsModel extends Conexion
         $consulta = mysql_query($sql,$conexion);
         return $consulta;
     }
-
+    public function getClientsFilterCity($ciudad)
+    {
+        $conexion =$this->connectMysql();
+        $sql = "select * from talleres where ciudad = '".$ciudad."' order by id_taller desc"; 
+        // die($sql); 
+        $consulta = mysql_query($sql,$conexion);
+        return $consulta;
+    }
+    
     public function saveClient($infoClient)
     {
         $conexion =$this->connectMysql();
-        $sql = "insert into talleres (nombre,telefono,direccion,dueno,contacto,tipo_taller)   
+        $sql = "insert into talleres (nombre,telefono,direccion,dueno,contacto,tipo_taller,ciudad)   
         values ('".$infoClient['nombre']."','".$infoClient['telefono']."','".$infoClient['direccion']."'
-        ,'".$infoClient['dueno']."','".$infoClient['contacto']."','".$infoClient['tipo']."'
+        ,'".$infoClient['dueno']."','".$infoClient['contacto']."','".$infoClient['tipo']."','".$infoClient['ciudad']."'
         )"; 
         $consulta = mysql_query($sql,$conexion);
         echo 'Taller grabado'; 
@@ -56,6 +64,33 @@ class ClientsModel extends Conexion
         $sql = "select * from seguimientos  where id_taller = '".$idTaller."' order by id_seguimiento desc  ";
         $consulta = mysql_query($sql,$conexion);
         return $consulta;  
+    }
+    public function getCities()
+    {
+        $sql = "select distinct(ciudad) from talleres order by ciudad  "; 
+        $conexion =$this->connectMysql();
+        $consulta = mysql_query($sql,$conexion);
+        $arreglo = $this->get_table_assoc($consulta);
+        return $arreglo;  
+    }
+
+    public function actualizarTaller($request)
+    {
+        $sql = "update talleres set 
+        nombre =  '".$request['nombre']."'
+        ,telefono =  '".$request['telefono']."'
+        ,direccion =  '".$request['direccion']."'
+        ,dueno =  '".$request['dueno']."'
+        ,contacto =  '".$request['contacto']."'
+        ,tipo_taller =  '".$request['tipo_taller']."'
+        ,ciudad =  '".$request['ciudad']."'
+        where id_taller = '".$request['idTaller']."'";
+        // die($sql);
+        $conexion =$this->connectMysql();
+        $consulta = mysql_query($sql,$conexion);
+
+        echo 'Taller actualizado';
+        
     }
     
     

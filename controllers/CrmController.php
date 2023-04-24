@@ -19,6 +19,12 @@ class CrmController
         if($_REQUEST['option']=='showClients'){
             $this->showClients();
         }
+        if($_REQUEST['option']=='showClientsFilter'){
+            // echo '<pre>'; 
+            // print_r($_REQUEST); 
+            // echo '</pre>';
+            $this->showClientsFilter($_REQUEST);
+        }
     
         if($_REQUEST['option']=='askNew'){
             $this->askNew();
@@ -43,6 +49,11 @@ class CrmController
         if($_REQUEST['option']=='showInfoClient'){
             $this->showInfoClient($_REQUEST);
         }
+        if($_REQUEST['option']=='actualizarTaller'){
+            $this->actualizarTaller($_REQUEST);
+        }
+
+        
 
 
     
@@ -54,6 +65,12 @@ class CrmController
     public function showClients()
     {
         $clients = $this->model->getClients();
+        // $clients = $this->model->conexion3();
+        $this->view->showClients($clients);
+    }
+    public function showClientsFilter($request)
+    {
+        $clients = $this->model->getClientsFilterCity($request['ciudad']);
         // $clients = $this->model->conexion3();
         $this->view->showClients($clients);
     }
@@ -87,7 +104,12 @@ class CrmController
         $client =  $this->model->getClientId($request['idTaller']);
         $this->view->askNew($client);
     }
-
+    
+    public function actualizarTaller($request)
+    {
+        $this->model->actualizarTaller($request);
+    }
+    
 }
 
 ?>

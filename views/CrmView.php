@@ -25,11 +25,33 @@ class CrmView{
        <body>
         <div id="div_principal_crm" class ="container">
             <h2>AR SOLUTION TECHNOLOGY</h2>
-            <div id="div_crm_botones">
-            
-                <button class="btn btn-primary" id="btn_vertalleres" onclick="verTalleres();">Ver_Talleres</button>
-                <button class="btn btn-primary" id="btn_nuevovliente" onclick="preguntarNuevo();"  data-toggle="modal" data-target="#myModalClientes">Nuevo_Taller</button>
-            
+            <div id="div_crm_botones" class ="row">
+                <div class ="col-xs-12 col-md-3 ">
+                    <button class="btn btn-primary" id="btn_vertalleres" onclick="verTalleres();">Ver_Talleres</button>
+                </div>
+                <div class ="col-xs-12 col-md-3">
+                    <button class="btn btn-primary" id="btn_nuevovliente" onclick="preguntarNuevo();"  data-toggle="modal" data-target="#myModalClientes">Nuevo_Taller</button>
+                </div>
+                <div class ="col-xs-12 col-md-3">
+                    <div class="form-group" align="right">
+                        <select class="form-control"  id= "idCiudad"  onchange="showClientsFilter();" >
+                            <?php
+                                echo '<option value="" selected >Seleccione Ciudad</option>';        
+        
+                                $cities = $this->model->getCities(); 
+                                foreach($cities as $city)
+                                {
+                                    echo '<option value="'.$city['ciudad'].'">'.$city['ciudad'].'</option>';        
+                                }
+                            ?>
+                        </select>
+                        
+                    </div>  
+                </div>
+                <div class ="col-xs-12 col-md-3">
+                    
+                </div>
+
             </div>
             <br>
             <div id="div_crm_resultados">
@@ -138,6 +160,7 @@ class CrmView{
         echo '<th>Id</th>';
         echo '<th>Taller</th>';
         echo '<th>Telefono</th>';
+        echo '<th>Ciudad</th>';
         // echo '<th>Direcion</th>';
         // echo '<th>Dueno</th>';
         // echo '<th>Contacto</th>';
@@ -151,6 +174,7 @@ class CrmView{
             echo '<td><button class="btn btn-primary" onclick="showInfoCLiente('.$client['id_taller'].')" data-toggle="modal" data-target="#myModalInfoCliente">'.$client['id_taller'].'</button></td>'; 
             echo '<td>'.$client['nombre'].'</td>'; 
             echo '<td>'.$client['telefono'].'</td>'; 
+            echo '<td>'.$client['ciudad'].'</td>'; 
             // echo '<td>'.$client['direccion'].'</td>'; 
             // echo '<td>'.$client['dueno'].'</td>'; 
             // echo '<td>'.$client['contacto'].'</td>'; 
@@ -174,6 +198,7 @@ class CrmView{
                 <span>Nombre Taller</span>
             </div>
             <div>
+                <input  type = "hidden" id="idTaller" value = "<?php   echo  $cliente['id_taller'] ?>">
                 <input class="form-control" type = "text" id="txtNombre" value = "<?php   echo  $cliente['nombre'] ?>">
             </div>
         </div>
@@ -219,12 +244,26 @@ class CrmView{
                 <input  class="form-control"  type = "text" id="txtTipo" value = "<?php   echo  $cliente['tipo_taller'] ?>">
             </div>
         </div>
+        <div class = "form-group">
+            <div>
+                <span>Ciudad</span>
+            </div>
+            <div>
+                <input  class="form-control"  type = "text" id="txtCiudad" value = "<?php   echo  $cliente['ciudad'] ?>">
+            </div>
+        </div>
         <?php 
             if($cliente == [])
             {
                 echo '<br>
-                <button class = "btn btn-primary btn-lg btn-block"id="btn_guardar_taller" onclick="grabarInfoTaller();">Guardar Nuevo Taller</button>
+                <button class = "btn btn-primary btn-lg btn-block" id="btn_guardar_taller" onclick="grabarInfoTaller();">Guardar Nuevo Taller</button>
                 ';
+            }
+            else {
+                echo '<br>
+                <button class = "btn btn-primary btn-lg btn-block" id="btn_guardar_taller" onclick="actualizarInfoTaller();">Actualizar Taller</button>
+                ';
+
             }
         ?>
         
