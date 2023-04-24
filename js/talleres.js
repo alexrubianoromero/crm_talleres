@@ -125,23 +125,37 @@ function validarInfo()
 
 function grabarSeguimiento(idTaller)
 {
-    var seguimiento = document.getElementById("txtSeguimiento").value ;
-    const http=new XMLHttpRequest();
-    const url = 'index.php';
-    http.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status ==200){
-            console.log(this.responseText);
-            document.getElementById("cuerpoModalSeguimiento").innerHTML = this.responseText;
-        }
-    };
-    http.open("POST",url);
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.send("option=saveFollow"
-            +"&idTaller="+idTaller  
-            +"&seguimiento="+seguimiento  
-        );
+    var valida = validarInfoSeguimiento();
+    if(valida){
+        var seguimiento = document.getElementById("txtSeguimiento").value ;
+        const http=new XMLHttpRequest();
+        const url = 'index.php';
+        http.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status ==200){
+                console.log(this.responseText);
+                document.getElementById("cuerpoModalSeguimiento").innerHTML = this.responseText;
+            }
+        };
+        http.open("POST",url);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send("option=saveFollow"
+                +"&idTaller="+idTaller  
+                +"&seguimiento="+seguimiento  
+            );
+    }    
 }
 
+function validarInfoSeguimiento()
+{
+    if($("#txtSeguimiento").val() == '')
+   {
+    alert('Digitar Seguimiento');
+    $("#txtSeguimiento").focus();
+    return 0;
+   }
+
+   return 1;
+} 
 function pantallaSeguimientos(idTaller)
 {
     const http=new XMLHttpRequest();

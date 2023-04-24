@@ -242,7 +242,7 @@ class CrmView{
                 <div>
                     <label for="">Seguimiento</label>
                     <div class="form-group">
-                        <textarea id="txtSeguimiento" rows="10" cols="20"></textarea>
+                        <textarea class ="form-control" id="txtSeguimiento" rows="10" cols="20"></textarea>
                     </div>
                 </div>
                 <br>
@@ -252,8 +252,14 @@ class CrmView{
     }
 
 
-    public function showAllFollowTaller($follows,$idTaller)
+    public function showAllFollowTaller($follows,$idTaller,$client)
     {
+        echo '<label>Nombre: </label>';
+        echo '<span> '.$client['nombre'].'</span>'  ;   
+        echo '<br>'   ;
+        echo '<label>Telefono: </label>';
+        echo '<span> '.$client['telefono'].'</span>';
+        echo '<br>';
         echo '<table class ="table table-striped">'; 
         echo '<tr>';
         echo '<th>Fecha</th>';
