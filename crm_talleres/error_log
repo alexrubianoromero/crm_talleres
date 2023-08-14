@@ -1,0 +1,84 @@
+[21-Feb-2023 11:54:30 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:54:30 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:54:30 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 11:55:16 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:55:16 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:55:16 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 11:56:46 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:56:46 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:56:46 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 11:57:58 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:57:58 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:57:58 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 11:58:31 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:58:31 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:58:31 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 11:59:28 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 11:59:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 11:59:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:01:28 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:01:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:01:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:01:33 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:01:33 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:01:33 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:02:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:02:32 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:02:32 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:03:16 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:03:16 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:03:16 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:04:34 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:04:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:04:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:05:28 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:05:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:05:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:05:29 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:05:29 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:05:29 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:05:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:05:32 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:05:32 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:08:15 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:08:15 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:08:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:08:19 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:08:19 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:08:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:08:22 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:08:22 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:08:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:08:24 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:08:24 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:08:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/views/CrmView.php on line 48
+[21-Feb-2023 12:10:21 UTC] PHP Fatal error:  Class 'models\ClientsModel' not found in /home/ctwtvsxj/public_html/crm_talleres/controllers/CrmController.php on line 14
+[21-Feb-2023 12:10:37 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:10:37 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:10:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 14
+[21-Feb-2023 12:10:40 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:10:40 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:10:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 14
+[21-Feb-2023 12:11:10 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:11:10 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 13
+[21-Feb-2023 12:11:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 14
+[21-Feb-2023 12:13:18 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:13:18 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 18
+[21-Feb-2023 12:13:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 19
+[21-Feb-2023 12:13:21 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:13:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 18
+[21-Feb-2023 12:13:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 19
+[21-Feb-2023 12:16:05 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:16:05 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 18
+[21-Feb-2023 12:16:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 19
+[21-Feb-2023 12:16:09 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:16:09 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 18
+[21-Feb-2023 12:16:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 19
+[21-Feb-2023 12:17:04 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 12:17:04 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 17
+[21-Feb-2023 12:17:04 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 18
+[21-Feb-2023 12:17:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 19
+[21-Feb-2023 13:00:13 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 13:00:13 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 14
+[21-Feb-2023 13:00:21 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/ctwtvsxj/public_html/crm_talleres/conexion/Conexion.php on line 35
+[21-Feb-2023 13:00:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ctwtvsxj/public_html/crm_talleres/models/ClientsModel.php on line 14
