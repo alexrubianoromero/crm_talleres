@@ -3,57 +3,69 @@
 namespace controllers;
 use views\CrmView;
 use models\ClientsModel;
+use models\UsuarioModel;
 class CrmController
 {
     protected $view;
     protected $model;
+    protected $modelUsuario;
 
     public function __construct()
     {   
-        $this->view = new CrmView();
-        $this->model = new ClientsModel();
+        // if(!$_SESSION['usuario'])
+        // {
+        //     $this->pantallaLogueo();
+        // }
+        // else
+        // {
+            $this->view = new CrmView();
+            $this->model = new ClientsModel();
+            $this->modelUsuario = new UsuarioModel();
 
-        if(!isset($_REQUEST['option'])){
-            $this->mainView();
-        }
-        if($_REQUEST['option']=='showClients'){
-            $this->showClients();
-        }
-        if($_REQUEST['option']=='showClientsFilter'){
-            // echo '<pre>'; 
-            // print_r($_REQUEST); 
-            // echo '</pre>';
-            $this->showClientsFilter($_REQUEST);
-        }
-    
-        if($_REQUEST['option']=='askNew'){
-            $this->askNew();
-        }
-        if($_REQUEST['option']=='saveClient'){
-            $this->saveClient($_REQUEST);
-        }
+            if(!isset($_REQUEST['option'])){
+                $this->mainView();
+            }
+            if($_REQUEST['option']=='showClients'){
+                $this->showClients();
+            }
+            if($_REQUEST['option']=='showClientsFilter'){
+                // echo '<pre>'; 
+                // print_r($_REQUEST); 
+                // echo '</pre>';
+                $this->showClientsFilter($_REQUEST);
+            }
         
-        if($_REQUEST['option']=='newFollow'){
-            // echo '<pre>'; 
-            // print_r($_REQUEST);
-            // echo '</pre>';
+            if($_REQUEST['option']=='askNew'){
+                $this->askNew();
+            }
+            if($_REQUEST['option']=='saveClient'){
+                $this->saveClient($_REQUEST);
+            }
             
-            $this->newFollow($_REQUEST);
-        }
-        if($_REQUEST['option']=='saveFollow'){
-            $this->saveFollow($_REQUEST);
-        }
-        if($_REQUEST['option']=='showFollows'){
-            $this->showFollows($_REQUEST);
-        }
-        if($_REQUEST['option']=='showInfoClient'){
-            $this->showInfoClient($_REQUEST);
-        }
-        if($_REQUEST['option']=='actualizarTaller'){
-            $this->actualizarTaller($_REQUEST);
-        }
+            if($_REQUEST['option']=='newFollow'){
+                // echo '<pre>'; 
+                // print_r($_REQUEST);
+                // echo '</pre>';
+                
+                $this->newFollow($_REQUEST);
+            }
+            if($_REQUEST['option']=='saveFollow'){
+                $this->saveFollow($_REQUEST);
+            }
+            if($_REQUEST['option']=='showFollows'){
+                $this->showFollows($_REQUEST);
+            }
+            if($_REQUEST['option']=='showInfoClient'){
+                $this->showInfoClient($_REQUEST);
+            }
+            if($_REQUEST['option']=='actualizarTaller'){
+                $this->actualizarTaller($_REQUEST);
+            }
+            if($_REQUEST['option']=='verificarCredenciales'){
+                $this->verificarCredenciales($_REQUEST);
+            }
 
-        
+        // }    
 
 
     
@@ -109,6 +121,38 @@ class CrmController
     {
         $this->model->actualizarTaller($request);
     }
+    public function pantallaLogueo()
+    {
+        ?>
+            <div id="div_logueo_inicial">
+                <P>Digite Usuario y contraseña</P>
+                <input  type="text"  id="user">
+                <input  type="password"  id="password">
+                <button onclick="verificarCredenciales();">Enviar</button>
+                <p>Acceso restringido a personal no autorizado </p>
+
+            </div>
+            <script src = '../js/talleres.js'></script>
+
+        <?php
+    }
+
+    public function verificarCredenciales($request)
+    {
+         $valida = $this->modelUsuario->verificarCredenciales($request);
+         if($valida['filas'] > 0)
+         {
+            //credenciales validas
+            $this->mainView();
+         }   
+         else{
+            echo 'Credenciales Invalidas';
+            $this->pantallaLogueo();
+         }
+    }
+
+
+    
     
 }
 

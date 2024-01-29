@@ -159,6 +159,8 @@ class CrmView{
         echo '<tr>'; 
         echo '<th>Id</th>';
         echo '<th>Taller</th>';
+        echo '<th>Dueno</th>';
+        echo '<th>Contacto</th>';
         echo '<th>Telefono</th>';
         echo '<th>Ciudad</th>';
         // echo '<th>Direcion</th>';
@@ -173,6 +175,8 @@ class CrmView{
             echo '<tr>';
             echo '<td><button class="btn btn-primary" onclick="showInfoCLiente('.$client['id_taller'].')" data-toggle="modal" data-target="#myModalInfoCliente">'.$client['id_taller'].'</button></td>'; 
             echo '<td>'.$client['nombre'].'</td>'; 
+            echo '<td>'.$client['dueno'].'</td>'; 
+            echo '<td>'.$client['contacto'].'</td>'; 
             echo '<td>'.$client['telefono'].'</td>'; 
             echo '<td>'.$client['ciudad'].'</td>'; 
             // echo '<td>'.$client['direccion'].'</td>'; 
