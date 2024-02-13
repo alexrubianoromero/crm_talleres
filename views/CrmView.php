@@ -1,12 +1,16 @@
 <?php
 namespace views;
 use models\ClientsModel;
+use models\SectorNegocioModel;
 
 class CrmView{
     protected $model;
+    protected $sectorNegocio;
+
     public function __construct()
     {
         $this->model = new ClientsModel();
+        $this->sectorNegocio = new SectorNegocioModel();
     }
 
     public function mainView()
@@ -19,6 +23,9 @@ class CrmView{
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+          <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+        
         
         <title>Document</title>
        </head>
@@ -26,13 +33,49 @@ class CrmView{
         <div id="div_principal_crm" class ="container">
             <h2>AR SOLUTION TECHNOLOGY</h2>
             <div id="div_crm_botones" class ="row">
-                <div class ="col-xs-12 col-md-3 ">
-                    <button class="btn btn-primary" id="btn_vertalleres" onclick="verTalleres();">Ver_Talleres</button>
+                <div class =" col-lg-3 mt-3">
+                    <button class="btn btn-primary btn-block mt-3" id="btn_vertalleres" onclick="verTalleres();">Ver_Talleres</button>
                 </div>
-                <div class ="col-xs-12 col-md-3">
-                    <button class="btn btn-primary" id="btn_nuevovliente" onclick="preguntarNuevo();"  data-toggle="modal" data-target="#myModalClientes">Nuevo_Taller</button>
+                <div class =" col-lg-3 mt-3">
+                    <button class="btn btn-primary btn-block mt-3" id="btn_nuevovliente" onclick="preguntarNuevo();"  
+                    data-toggle="modal" data-target="#myModalClientes">Nuevo_Taller</button>
                 </div>
-                <div class ="col-xs-12 col-md-3">
+                <div class =" col-lg-3 mt-3">
+                    <input class="form-control mt-3"   
+                    type="text" id="nombreABuscarTaller"  
+                    placeholder="Taller"
+                    onkeyup ="buscarTallerPorNombreTaller();"
+                    >
+                </div>
+                <div class =" col-lg-3 mt-3">
+                    <input class="form-control mt-3"   
+                    type="text" id="nombreABuscarDueno"  
+                    placeholder="Dueno"
+                    onkeyup ="buscarTallerPorNombre();"
+                    >
+                </div>
+                <div class =" col-lg-3 mt-3">
+                    <input class="form-control mt-3"   
+                    type="text" id="nombreABuscarContacto"  
+                    placeholder="Contacto"
+                    onkeyup ="buscarTallerPorNombreContacto();"
+                    >
+                </div>
+                <div class =" col-lg-3 mt-3">
+                    <select style="color:blue;" class="form-control mt-3"  id="idSectorNegocio"  onchange="buscarSectorNegocio();">
+                    <?php
+                        $sectores =  $this->sectorNegocio->getSectors(); 
+                        echo '<option value="-1">Seleccione Sector(Nuevo)...</option>';
+                        foreach($sectores as $sector)
+                        {
+                            echo '<option value="'.$sector['id'].'">'.$sector['descripcion'].'</option>';
+                        }
+                    ?>
+                    </select>
+                </div>
+
+
+                <div class =" col-lg-3 mt-3">
                     <div class="form-group" align="right">
                         <select class="form-control"  id= "idCiudad"  onchange="showClientsFilter();" >
                             <?php
@@ -250,6 +293,26 @@ class CrmView{
         </div>
         <div class = "form-group">
             <div>
+                <span style="color:blue">Linea de Negocio(Nuevo)</span>
+            </div>
+            <div>
+                <select id="idSectorNegocioValue" class="form-control" >
+                <?php
+                 $sectores =  $this->sectorNegocio->getSectors(); 
+                 echo '<option value="-1">Seleccione...</option>';
+                 foreach($sectores as $sector)
+                 {
+                     echo '<option value="'.$sector['id'].'">'.$sector['descripcion'].'</option>';
+
+                 }
+
+                ?>
+
+                </select>
+            </div>
+        </div>
+        <div class = "form-group">
+            <div>
                 <span>Ciudad</span>
             </div>
             <div>
@@ -260,7 +323,7 @@ class CrmView{
             if($cliente == [])
             {
                 echo '<br>
-                <button class = "btn btn-primary btn-lg btn-block" id="btn_guardar_taller" onclick="grabarInfoTaller();">Guardar Nuevo Taller</button>
+                <button class = "btn btn-primary btn-lg btn-block" id="btn_guardar_taller" onclick="grabarInfoTaller();">Guardar Nuevo Negocio</button>
                 ';
             }
             else {

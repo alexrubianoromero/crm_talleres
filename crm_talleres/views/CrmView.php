@@ -1,8 +1,16 @@
 <?php
 namespace views;
 
+use models\SectorNegocioModel;
+
 class CrmView{
 
+    protected  $sectorNegocioModel;
+
+    public function __construct()
+    {
+        $this->sectorNegocioModel = new SectorNegocioModel();
+    }
 
     public function mainView()
     {
@@ -207,6 +215,26 @@ class CrmView{
             </div>
             <div>
                 <input  class="form-control"  type = "text" id="txtTipo">
+            </div>
+        </div>
+        <div class = "form-group">
+            <div>
+                <span>Linea de Negocio</span>
+            </div>
+            <div>
+                <select id="sectorNegocio">
+                <?php
+                 $sectores = $this->sectorNegocioModel->getSectors();     
+                 echo '<option value="-1">Seleccione...</option>';
+                 foreach($sectores as $sector)
+                 {
+                     echo '<option value="'.$sector['id'].'">'.$sector['descripcion'].'</option>';
+
+                 }
+
+                ?>
+
+                </select>
             </div>
         </div>
         <br>

@@ -62,6 +62,7 @@ function grabarInfoTaller()
         var contacto = document.getElementById("txtContacto").value ;
         var tipo = document.getElementById("txtTipo").value ;
         var ciudad = document.getElementById("txtCiudad").value ;
+        var idSectorNegocio = document.getElementById("idSectorNegocioValue").value ;
         const http=new XMLHttpRequest();
         const url = 'index.php';
         http.onreadystatechange = function(){
@@ -80,6 +81,7 @@ function grabarInfoTaller()
                 +"&contacto="+contacto  
                 +"&tipo="+tipo  
                 +"&ciudad="+ciudad  
+                +"&idSectorNegocio="+idSectorNegocio  
             );
   }
 }
@@ -111,6 +113,12 @@ function validarInfo()
    {
     alert('Digitar el Contacto');
     $("#txtContacto").focus();
+    return 0;
+   }
+   if($("#idSectorNegocioValue").val() == '-1')
+   {
+    alert('Escoja el sector ');
+    $("#idSectorNegocioValue").focus();
     return 0;
    }
    if($("#txtTipo").val() == '')
@@ -263,5 +271,77 @@ function verificarCredenciales()
     "option=verificarCredenciales"
     +"&user="+user  
     +"&password="+password  
+    );
+}
+function buscarTallerPorNombre()
+{
+    var nombre = document.getElementById("nombreABuscarDueno").value ;
+    const http=new XMLHttpRequest();
+    const url = 'index.php';
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+            document.getElementById("div_crm_resultados").innerHTML = this.responseText;
+        }
+    };
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(
+    "option=buscarTallerPorNombre"
+    +"&nombre="+nombre  
+    );
+}
+function buscarTallerPorNombreContacto()
+{
+    var nombre = document.getElementById("nombreABuscarContacto").value ;
+    const http=new XMLHttpRequest();
+    const url = 'index.php';
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+            document.getElementById("div_crm_resultados").innerHTML = this.responseText;
+        }
+    };
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(
+    "option=buscarTallerPorNombreContacto"
+    +"&nombre="+nombre  
+    );
+}
+function buscarTallerPorNombreTaller()
+{
+    var nombre = document.getElementById("nombreABuscarTaller").value ;
+    const http=new XMLHttpRequest();
+    const url = 'index.php';
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+            document.getElementById("div_crm_resultados").innerHTML = this.responseText;
+        }
+    };
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(
+    "option=buscarTallerPorNombreTaller"
+    +"&nombre="+nombre  
+    );
+}
+function buscarSectorNegocio()
+{
+    var idSector = document.getElementById("idSectorNegocio").value ;
+    const http=new XMLHttpRequest();
+    const url = 'index.php';
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+            document.getElementById("div_crm_resultados").innerHTML = this.responseText;
+        }
+    };
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(
+    "option=buscarSectorNegocio"
+    +"&idSector="+idSector  
     );
 }

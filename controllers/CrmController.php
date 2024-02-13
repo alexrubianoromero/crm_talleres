@@ -64,6 +64,18 @@ class CrmController
             if($_REQUEST['option']=='verificarCredenciales'){
                 $this->verificarCredenciales($_REQUEST);
             }
+            if($_REQUEST['option']=='buscarTallerPorNombre'){
+                $this->buscarTallerPorNombre($_REQUEST);
+            }
+            if($_REQUEST['option']=='buscarTallerPorNombreContacto'){
+                $this->buscarTallerPorNombreContacto($_REQUEST);
+            }
+            if($_REQUEST['option']=='buscarTallerPorNombreTaller'){
+                $this->buscarTallerPorNombreTaller($_REQUEST);
+            }
+            if($_REQUEST['option']=='buscarSectorNegocio'){
+                $this->buscarSectorNegocio($_REQUEST);
+            }
 
         // }    
 
@@ -77,6 +89,30 @@ class CrmController
     public function showClients()
     {
         $clients = $this->model->getClients();
+        // $clients = $this->model->conexion3();
+        $this->view->showClients($clients);
+    }
+    public function buscarTallerPorNombre($request)
+    {
+        $clients = $this->model->getClientsFilterNombre($request['nombre']);
+        // $clients = $this->model->conexion3();
+        $this->view->showClients($clients);
+    }
+    public function buscarTallerPorNombreContacto($request)
+    {
+        $clients = $this->model->getClientsFilterNombreContacto($request['nombre']);
+        // $clients = $this->model->conexion3();
+        $this->view->showClients($clients);
+    }
+    public function buscarTallerPorNombreTaller($request)
+    {
+        $clients = $this->model->getClientsFilterNombreTaller($request['nombre']);
+        // $clients = $this->model->conexion3();
+        $this->view->showClients($clients);
+    }
+    public function buscarSectorNegocio($request)
+    {
+        $clients = $this->model->getClientsFilterSectorNegocio($request['idSector']);
         // $clients = $this->model->conexion3();
         $this->view->showClients($clients);
     }

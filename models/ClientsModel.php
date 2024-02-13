@@ -20,14 +20,48 @@ class ClientsModel extends Conexion
         $consulta = mysql_query($sql,$conexion);
         return $consulta;
     }
+    public function getClientsFilterNombre($nombre)
+    {
+        $conexion =$this->connectMysql();
+        $sql = "select * from talleres where dueno like '%".$nombre."%' order by id_taller desc"; 
+        // die($sql); 
+        $consulta = mysql_query($sql,$conexion);
+        return $consulta;
+    }
+    public function getClientsFilterNombreContacto($nombre)
+    {
+        $conexion =$this->connectMysql();
+        $sql = "select * from talleres where contacto like '%".$nombre."%' order by id_taller desc"; 
+        // die($sql); 
+        $consulta = mysql_query($sql,$conexion);
+        return $consulta;
+    }
+    public function getClientsFilterNombreTaller($nombre)
+    {
+        $conexion =$this->connectMysql();
+        $sql = "select * from talleres where nombre like '%".$nombre."%' order by id_taller desc"; 
+        // die($sql); 
+        $consulta = mysql_query($sql,$conexion);
+        return $consulta;
+    }
+    public function getClientsFilterSectorNegocio($idSector)
+    {
+        $conexion =$this->connectMysql();
+        $sql = "select * from talleres where idSectorNegocio = '".$idSector."' order by id_taller desc"; 
+        // die($sql); 
+        $consulta = mysql_query($sql,$conexion);
+        return $consulta;
+    }
     
     public function saveClient($infoClient)
     {
         $conexion =$this->connectMysql();
-        $sql = "insert into talleres (nombre,telefono,direccion,dueno,contacto,tipo_taller,ciudad)   
+        $sql = "insert into talleres (nombre,telefono,direccion,dueno,contacto,tipo_taller,ciudad,idSectorNegocio)   
         values ('".$infoClient['nombre']."','".$infoClient['telefono']."','".$infoClient['direccion']."'
         ,'".$infoClient['dueno']."','".$infoClient['contacto']."','".$infoClient['tipo']."','".$infoClient['ciudad']."'
+        ,'".$infoClient['idSectorNegocio']."'
         )"; 
+        // die($sql);
         $consulta = mysql_query($sql,$conexion);
         echo 'Taller grabado'; 
     }
